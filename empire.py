@@ -187,8 +187,12 @@ def _direct_rss_fallback():
     RSS/Atom feeds trend-pulse itself reads. Returns (items, status)."""
     items, status = [], {}
     try:
-        root = ET.fromstring(_rss_fetch("https://trends.google.com/trends/trendingsearches/daily/rss?geo=US"))
-        for it in root.iter("item")[:10]:
+        # NOTE (Nov 8, 2026): the old daily endpoint
+        # /trends/trendingsearches/daily/rss returns HTTP 404 now — Google
+        # moved Daily Search Trends to /trending/rss (same <item><title>
+        # shape, so the parse below is unchanged).
+        root = ET.fromstring(_rss_fetch("https://trends.google.com/trending/rss?geo=US"))
+        for it in list(root.iter("item"))[:10]:
             t = it.findtext("title") or ""
             items.append({"keyword": t.strip(), "score": 50.0, "source": "google_trends",
                           "url": "", "traffic": "", "category": "", "published": ""})
