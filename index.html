@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketing Empire — Sample videos &amp; posts for ARTISY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Marketing Empire</h1>
+  <p class="tagline">Watch sample videos &amp; make posts for ARTISY products — free, no password, no card.</p>
+  <p class="tagline-pt">Assista a vídeos de exemplo e crie posts para os produtos ARTISY — grátis, sem senha, sem cartão.</p>
+  <p id="server-status" class="status" role="status">Checking the server…</p>
+</header>
+
+<main>
+  <!-- 1. SAMPLE VIDEOS (videos are made on request, not on this page) -->
+  <section class="card" id="video-section" aria-labelledby="video-heading">
+    <h2 id="video-heading">1. Sample videos</h2>
+    <p class="hint">Two real videos made with this system — watch them, then make your own posts below.</p>
+
+    <h3>Naturally Radiant: Day 1 Starter</h3>
+    <p class="note">“Day 1 organic skincare routine” — 34 seconds</p>
+    <video controls preload="metadata" poster="videos/sample-naturally-radiant.png" src="videos/sample-naturally-radiant.mp4" style="width:100%;max-width:360px;display:block;margin:0 auto;"></video>
+
+    <h3>Sleep Sanctuary</h3>
+    <p class="note">“A calmer night tonight” — 28 seconds</p>
+    <video controls preload="metadata" poster="videos/sample-sleep-sanctuary.png" src="videos/sample-sleep-sanctuary.mp4" style="width:100%;max-width:360px;display:block;margin:0 auto;"></video>
+
+    <p class="note">Videos are made on request, not on this page. Want one like these? Ask Ting in the ARTISY community — or start from the store: <a href="https://shop.artistrystore.com">shop.artistrystore.com</a>.</p>
+
+    <p class="rule">Every video names shop.artistrystore.com and a real product. No income promises. No invented numbers.</p>
+  </section>
+
+  <!-- 2. MAKE POSTS -->
+  <section class="card" id="campaign-section" aria-labelledby="campaign-heading">
+    <h2 id="campaign-heading">2. Make posts</h2>
+    <p class="hint">One message, turned into a post for each platform you pick.</p>
+
+    <label for="campaign-product">Product</label>
+    <select id="campaign-product"></select>
+    <p id="campaign-product-detail" class="product-detail"></p>
+
+    <label for="campaign-angle">Your message (angle)</label>
+    <textarea id="campaign-angle" rows="3" placeholder="Example: Day 1 of your natural skincare routine starts with one simple scrub." maxlength="500"></textarea>
+
+    <fieldset class="platforms">
+      <legend>Where to post</legend>
+      <label class="check"><input type="checkbox" value="facebook" checked> Facebook</label>
+      <label class="check"><input type="checkbox" value="instagram" checked> Instagram</label>
+      <label class="check"><input type="checkbox" value="tiktok" checked> TikTok</label>
+      <label class="check"><input type="checkbox" value="pinterest" checked> Pinterest</label>
+    </fieldset>
+
+    <button id="make-posts-btn" class="big-btn" type="button">Make my posts<br><span class="pt">Criar posts</span></button>
+
+    <div id="campaign-status" class="result" aria-live="polite"></div>
+    <div id="campaign-posts"></div>
+
+    <p class="rule">Every post carries #ad and the FULL link — never shortened. Read each post once before you publish it.</p>
+  </section>
+
+  <!-- 3. TRENDING NOW -->
+  <section class="card" id="trends-section" aria-labelledby="trends-heading">
+    <h2 id="trends-heading">3. Trending now</h2>
+    <p class="hint">Real trending topics, right now — use one as your next video or post idea.</p>
+
+    <button id="show-trends-btn" class="big-btn" type="button">Show trends<br><span class="pt">Ver tendências</span></button>
+
+    <div id="trends-status" class="result" aria-live="polite"></div>
+    <ol id="trends-list" class="trends"></ol>
+    <p id="trends-sources" class="note"></p>
+
+    <p class="rule">If a source returns nothing, we say so — we never invent topics.</p>
+  </section>
+
+  <!-- 4. MY WORK -->
+  <section class="card" id="dashboard-section" aria-labelledby="dashboard-heading">
+    <h2 id="dashboard-heading">4. My work</h2>
+    <p class="hint">Your videos, campaigns, plans and trends, all in one place.</p>
+
+    <button id="refresh-btn" class="big-btn" type="button">Refresh<br><span class="pt">Atualizar</span></button>
+
+    <div id="dashboard-status" class="result" aria-live="polite"></div>
+    <div id="dashboard-counts" class="counts"></div>
+    <h3>Recent videos</h3>
+    <div id="dashboard-videos"></div>
+    <h3>Recent campaigns</h3>
+    <div id="dashboard-campaigns"></div>
+    <h3>Recent trends</h3>
+    <div id="dashboard-trends"></div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>House rules — always:</strong></p>
+  <ul>
+    <li>Every video names <strong>shop.artistrystore.com</strong> and a real product.</li>
+    <li>Every post carries <strong>#ad</strong> and the <strong>full link</strong> — never shortened.</li>
+    <li><strong>No income promises. No invented numbers.</strong></li>
+    <li>We never ask for your password, your card, or Ting's keys. This page has no tracking.</li>
+  </ul>
+  <p>Store: <a href="https://shop.artistrystore.com">shop.artistrystore.com</a> · Marketing Empire for ARTISY affiliates</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
