@@ -1,0 +1,29 @@
+# Marketing Empire — Render backend dependencies.
+#
+# Every pin matches the WORKING bench setup (Nov 8, 2026) and was verified
+# to exist on PyPI with a wheel before this file was written.
+# Install torch from PyTorch's CPU index FIRST (see Dockerfile) — PyPI's
+# default torch wheel is the multi-GB CUDA build and this service is
+# CPU-only. requirements.txt also pins torch==2.14.1; pip sees the CPU
+# install already satisfies it and skips re-installing from PyPI.
+#
+# Directly imported by our code: kokoro (+ its [en] chain), Pillow,
+# soundfile, numpy, huggingface-hub, trend-pulse. The rest are pinned
+# transitive deps of that set, fixed at the bench-proven versions so a
+# rebuild cannot silently drift (notably transformers 5.20.2 and
+# huggingface-hub 2.3.0 — newer releases exist and were NOT the tested ones).
+# spacy and the rest of the misaki[en] chain resolve transitively via kokoro.
+
+torch==2.14.1
+kokoro==0.9.4
+misaki==0.9.4
+transformers==5.20.2
+tokenizers==0.23.3
+huggingface-hub==2.3.0
+numpy==2.5.4
+Pillow==13.0.0
+soundfile==0.14.0
+trend-pulse==2.1.0
+espeakng-loader==0.2.4
+phonemizer-fork==3.3.2
+loguru==0.7.3

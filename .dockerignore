@@ -1,0 +1,11 @@
+# Docker build context is marketing-empire-build/. Nothing below is copied
+# by the Dockerfile's explicit COPY lines, but this keeps the context lean
+# and stops bench-only state from ever sneaking into an image.
+runs/
+empire.db
+__pycache__/
+*.pyc
+.git/
+docs/
+vendor/
+web/preview-home.png

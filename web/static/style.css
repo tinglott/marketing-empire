@@ -1,0 +1,173 @@
+/* Marketing Empire — house palette: navy #0a0e1a, card #151d36,
+   white #eef1f8, gold #f5c451, lavender #9aa3c0, sky #7fd4ff.
+   No external fonts or assets — plain system fonts so the page works anywhere. */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #0a0e1a;
+  color: #eef1f8;
+  margin: 0;
+  padding: 0 1em 2em;
+  line-height: 1.5;
+  font-size: 17px;
+}
+
+.top { max-width: 720px; margin: 0 auto; padding-top: 1.2em; text-align: center; }
+main { max-width: 720px; margin: 0 auto; }
+footer { max-width: 720px; margin: 2em auto 0; color: #9aa3c0; font-size: 0.95em; }
+
+h1, h2, h3 { color: #f5c451; }
+h1 { font-size: 1.9em; margin: 0.2em 0; }
+h2 { font-size: 1.35em; margin-top: 0; }
+h3 { font-size: 1.1em; margin: 1.2em 0 0.4em; }
+
+a { color: #7fd4ff; }
+
+.tagline { margin: 0.2em 0; }
+.tagline-pt { margin: 0.2em 0; color: #9aa3c0; }
+
+.status { color: #7fd4ff; font-weight: bold; }
+.status.bad { color: #ffb3b3; }
+
+.card {
+  background: #151d36;
+  padding: 1.2em;
+  border-radius: 12px;
+  margin: 1.2em 0;
+}
+
+.hint { color: #9aa3c0; margin-top: -0.4em; }
+.note { color: #9aa3c0; font-size: 0.92em; }
+.rule { color: #9aa3c0; font-size: 0.92em; border-top: 1px solid #2a355c; padding-top: 0.7em; margin-top: 1.2em; }
+.product-detail { color: #9aa3c0; font-size: 0.95em; min-height: 1.2em; }
+.product-detail strong { color: #eef1f8; }
+
+label { display: block; font-weight: bold; margin: 1em 0 0.35em; }
+select, input[type="text"], input[type="password"], textarea {
+  width: 100%;
+  font-size: 1.05em;
+  padding: 0.7em 0.8em;
+  border-radius: 8px;
+  border: 1px solid #2a355c;
+  background: #0a0e1a;
+  color: #eef1f8;
+}
+textarea { resize: vertical; }
+
+.big-btn {
+  display: block;
+  width: 100%;
+  margin: 1.2em 0 0.4em;
+  padding: 0.9em 1em;
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #0a0e1a;
+  background: #f5c451;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  min-height: 56px;
+}
+.big-btn:hover { background: #ffd97a; }
+.big-btn:disabled { background: #9aa3c0; cursor: wait; }
+.big-btn .pt { font-size: 0.8em; font-weight: normal; }
+
+.platforms { border: 1px solid #2a355c; border-radius: 8px; margin: 1em 0 0; padding: 0.6em 0.8em; }
+.platforms legend { font-weight: bold; padding: 0 0.4em; }
+.check {
+  display: inline-block;
+  margin: 0.4em 0.8em 0.4em 0;
+  font-weight: normal;
+  font-size: 1.05em;
+}
+.check input { width: 1.3em; height: 1.3em; vertical-align: middle; margin-right: 0.3em; }
+
+.result { margin-top: 1em; }
+.result:empty { margin-top: 0; }
+.error { color: #ffb3b3; font-weight: bold; }
+.ok { color: #7fd4ff; }
+
+.downloads a, .post-card a {
+  display: inline-block;
+  margin: 0.3em 0.6em 0.3em 0;
+  padding: 0.6em 1em;
+  background: #7fd4ff;
+  color: #0a0e1a;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.downloads a:hover, .post-card a:hover { background: #a8e2ff; }
+
+.post-card {
+  background: #0a0e1a;
+  border: 1px solid #2a355c;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 0.8em 0;
+}
+.post-card h3 { margin-top: 0; }
+.post-card .post-text { white-space: pre-wrap; word-wrap: break-word; }
+.post-card .meta { color: #9aa3c0; font-size: 0.92em; }
+.copy-btn {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: bold;
+  color: #0a0e1a;
+  background: #f5c451;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  min-height: 44px;
+}
+.copy-btn:hover { background: #ffd97a; }
+
+.trends { padding-left: 1.4em; }
+.trends li { margin: 0.5em 0; }
+.trends .src { color: #9aa3c0; font-size: 0.9em; }
+.trends .score { color: #7fd4ff; font-weight: bold; }
+
+.counts { display: flex; flex-wrap: wrap; gap: 0.6em; margin: 0.8em 0; }
+.count-box {
+  flex: 1 1 40%;
+  background: #0a0e1a;
+  border: 1px solid #2a355c;
+  border-radius: 10px;
+  padding: 0.8em;
+  text-align: center;
+}
+.count-box .num { display: block; font-size: 1.8em; font-weight: bold; color: #f5c451; }
+.count-box .lbl { color: #9aa3c0; }
+
+.work-list { list-style: none; padding: 0; }
+.work-list li {
+  background: #0a0e1a;
+  border: 1px solid #2a355c;
+  border-radius: 8px;
+  padding: 0.7em 0.9em;
+  margin: 0.5em 0;
+}
+.work-list .links a { margin-right: 0.8em; font-size: 0.95em; }
+.work-list .when { color: #9aa3c0; font-size: 0.9em; }
+
+.script-box {
+  background: #0a0e1a;
+  border: 1px solid #2a355c;
+  border-radius: 8px;
+  padding: 1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.empty { color: #9aa3c0; }
+
+@media (max-width: 480px) {
+  body { font-size: 16px; padding: 0 0.7em 2em; }
+  .card { padding: 1em; }
+  .count-box { flex: 1 1 45%; }
+}
